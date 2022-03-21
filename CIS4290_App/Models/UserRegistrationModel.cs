@@ -18,8 +18,8 @@ namespace CIS4290_App.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        // [CreditCard]
         public string CardNumber { get; set; }
-
         public string ExpDate { get; set; }
         public string Csv { get; set; }
     }

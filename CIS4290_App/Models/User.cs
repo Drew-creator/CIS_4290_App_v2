@@ -6,5 +6,6 @@ namespace CIS4290_App.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
     }
 }

@@ -42,9 +42,9 @@ namespace CIS4290_App.Migrations
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    //CardNumber = table.Column<string>(maxLength: 16, nullable: true),
-                    //CardExp = table.Column<string>(maxLength: 9, nullable: true),
-                    //CSV = table.Column<string>(maxLength: 9, nullable: true),
+                    CardNumber = table.Column<string>(maxLength: 20, nullable: true),
+                    CardExp = table.Column<string>(maxLength: 9, nullable: true),
+                    Csv = table.Column<string>(maxLength: 9, nullable: true),
 
                 },
                 constraints: table =>

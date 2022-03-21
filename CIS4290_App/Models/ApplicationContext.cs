@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CIS4290_App.Models
 {
-    public class ApplicationContext : IdentityDbContext<User>
+    public class ApplicationContext : IdentityDbContext<User> // inheriting from IdentityDbContext base class
     {
         public ApplicationContext(DbContextOptions options)
         : base(options)
@@ -17,6 +17,6 @@ namespace CIS4290_App.Models
             
         }
 
-        public DbSet<Employee> Employees { get; set; }
+       
     }
 }

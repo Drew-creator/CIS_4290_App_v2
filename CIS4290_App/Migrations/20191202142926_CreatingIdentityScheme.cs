@@ -41,7 +41,11 @@ namespace CIS4290_App.Migrations
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true)
+                    LastName = table.Column<string>(nullable: true),
+                    //CardNumber = table.Column<string>(maxLength: 16, nullable: true),
+                    //CardExp = table.Column<string>(maxLength: 9, nullable: true),
+                    //CSV = table.Column<string>(maxLength: 9, nullable: true),
+
                 },
                 constraints: table =>
                 {

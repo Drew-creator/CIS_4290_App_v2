@@ -1,59 +1,125 @@
 ﻿@model CIS4290_App.Models.UserRegistrationModel
 
-<h1>Register</h1>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label">First Name</label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+
+
+
+<body class="page theme-betheme woocommerce-no-js  style-simple button-flat layout-full-width if-disable if-border-hide no-content-padding no-shadows header-classic header-fw minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll">
+    
+
+            <div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Register</h1>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label">Last Name</label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+        
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section mcb-section  equal-height-wrap" style="padding-bottom:70px">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one-second  valign-middle clearfix" style="padding:0 5% 0 0">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_column">
+                                            <div class="column_attr clearfix" style="padding:0 0 25px 0;border-bottom: 2px solid #000;">                                           
+                                                <h1>Start Browsing Lofty Furniture Today</h1>
+                                                
+                                                <form asp-action="Register">
+                                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                                    <div class="form-group">
+                                                        <label asp-for="FirstName" class="control-label">First Name</label>
+                                                        <input asp-for="FirstName" class="form-control" />
+                                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="LastName" class="control-label">Last Name</label>
+                                                        <input asp-for="LastName" class="form-control" />
+                                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Email" class="control-label">Email</label>
+                                                        <input asp-for="Email" class="form-control" />
+                                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Password" class="control-label">Password</label>
+                                                        <input asp-for="Password" class="form-control" />
+                                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="ConfirmPassword" class="control-label">Confirm Password</label>
+                                                        <input asp-for="ConfirmPassword" class="form-control" />
+                                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap mcb-wrap one-second  valign-middle clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_image">
+                                            <div class="image_frame image_item no_link scale-with-grid no_border">
+                                                <div class="image_wrapper"><img class="scale-with-grid" src="~/content/home3/images/home3-wrapbg1.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section mcb-section" style="padding-bottom:70px">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one  valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-fifth column_placeholder">
+                                            <div class="placeholder">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label">Email</label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label">Password</label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-	        <div class="form-group">
-		        <label asp-for="ConfirmPassword" class="control-label">Confirm Password</label>
-		        <input asp-for="ConfirmPassword" class="form-control" />
-		        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-	        </div>
-	        <div class="form-group">
-		        <label asp-for="CardNumber" class="control-label">Credit Card Number</label>
-		        <input asp-for="CardNumber" class="form-control" />
-		        <span asp-validation-for="CardNumber" class="text-danger"></span>
-	        </div>
-	        <div class="form-group">
-		        <label asp-for="ExpDate" class="control-label">Exp Date</label>
-		        <input asp-for="ExpDate" class="form-control" />
-		        <span asp-validation-for="ExpDate" class="text-danger"></span>
-	        </div>
-	        <div class="form-group">
-		        <label asp-for="Csv" class="control-label">CSV</label>
-		        <input asp-for="Csv" class="form-control" />
-		        <span asp-validation-for="Csv" class="text-danger"></span>
-	        </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+        </div>
+        
+
+    <!-- JS -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/translate3d.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/email.js"></script>
+
+
+
+</body>
+
+</html>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

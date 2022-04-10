@@ -63,6 +63,21 @@
                                                         <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label asp-for="CardNumber" class="control-label">Card Number</label>
+                                                        <input asp-for="CardNumber" class="form-control" />
+                                                        <span asp-validation-for="CardNumber" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="ExpDate" class="control-label">Exp Date</label>
+                                                        <input asp-for="ExpDate" class="form-control" />
+                                                        <span asp-validation-for="ExpDate" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Csv" class="control-label">Csv</label>
+                                                        <input asp-for="Csv" class="form-control" />
+                                                        <span asp-validation-for="Csv" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <input type="submit" value="Create" class="btn btn-primary" />
                                                     </div>
                                                 </form>

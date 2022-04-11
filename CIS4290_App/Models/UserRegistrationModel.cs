@@ -4,6 +4,11 @@ namespace CIS4290_App.Models
 {
     public class UserRegistrationModel
     {
+        public string CardNumber { get; set; }
+
+        public string ExpDate { get; set; }
+
+        public string Csv { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Required(ErrorMessage = "Email is required")]
@@ -19,8 +24,5 @@ namespace CIS4290_App.Models
         public string ConfirmPassword { get; set; }
 
         // [CreditCard]
-        public string CardNumber { get; set; }
-        public string ExpDate { get; set; }
-        public string Csv { get; set; }
     }
 }

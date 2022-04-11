@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CIS4290_App.Migrations
 {
-    public partial class CreatingIdentityScheme : Migration
+    public partial class name : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -41,11 +41,7 @@ namespace CIS4290_App.Migrations
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    CardNumber = table.Column<string>(maxLength: 20, nullable: true),
-                    CardExp = table.Column<string>(maxLength: 9, nullable: true),
-                    Csv = table.Column<string>(maxLength: 9, nullable: true),
-
+                    LastName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -13,10 +13,9 @@ namespace CIS4290_App.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            
         }
 
        
     }
+
 }

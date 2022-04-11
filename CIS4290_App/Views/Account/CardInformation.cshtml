@@ -2,10 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Credit Card</title>
+    <title>Payment</title>
 </head>
 <body>
-<h1>Account Details</h1>
+    <h1>Make a Payment</h1>
+    <form action="">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" required/>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" required/>
+        <label for="CardNumber">Card Number</label>
+        <input id="ccn" type="tel" inputmode="numeric" required pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+        <button type="submit">Submit</button>
+    </form>
+
 	
 </body>
 </html>

@@ -11,8 +11,14 @@
         <input type="text" id="firstName" required/>
         <label for="lastName">Last Name</label>
         <input type="text" id="lastName" required/>
-        <label for="CardNumber">Card Number</label>
-        <input id="ccn" type="tel" inputmode="numeric" required pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+        <label for="cardNumber">Card Number</label>
+        <input id="cardNumber" type="tel" inputmode="numeric" required pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+        <label for="expDate">Exp Date</label>
+        <input id="expDate" type="text" placeholder="mm/yy" minlength="5" maxlength="5" required/>
+        <label for="csv">Csv</label>
+        <input id="csv" type="number" placeholder="xxx" minlength="3" maxlength="3" required/>
+        <label for="charge">Amount to charge</label>
+        <input type="number" id="charge" placeholder="$0" required/>
         <button type="submit">Submit</button>
     </form>
 

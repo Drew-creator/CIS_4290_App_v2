@@ -14,8 +14,6 @@ namespace CIS4290_App.Models
         {
             base.OnModelCreating(modelBuilder);
         }
-
-       
     }
 
 }

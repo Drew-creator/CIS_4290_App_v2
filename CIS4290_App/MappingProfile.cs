@@ -7,7 +7,7 @@ namespace CIS4290_App
     {
         public MappingProfile()
         {
-            CreateMap<UserRegistrationModel, User>()
+            CreateMap<NewUserRegistrationModel, User>()
                 .ForMember(u => u.UserName, opt => opt.MapFrom(x => x.Email));
         }
     }

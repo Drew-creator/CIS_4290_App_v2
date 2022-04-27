@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CIS4290_App.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220411002850_name")]
-    partial class name
+    [Migration("20220426003739_UpdatedNewColumns-1")]
+    partial class UpdatedNewColumns1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,8 +29,17 @@ namespace CIS4290_App.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<float?>("Amount")
+                        .HasColumnType("real");
+
+                    b.Property<string>("CardNumber")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Csv")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -40,10 +49,7 @@ namespace CIS4290_App.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("ExpDate")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")

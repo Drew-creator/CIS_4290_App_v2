@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CIS4290_App.Migrations
 {
-    public partial class name : Migration
+    public partial class UpdatedNewColumns : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,8 +40,10 @@ namespace CIS4290_App.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true)
+                    CreditCardNumber = table.Column<string>(nullable: false),
+                    CardExpDate = table.Column<string>(nullable: false),
+                    CardCsv = table.Column<string>(nullable: false),
+                    Amount = table.Column<float>(nullable: true)
                 },
                 constraints: table =>
                 {

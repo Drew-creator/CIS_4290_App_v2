@@ -16,6 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220425235120_NewColumnsAdded.cs" />
+    <Compile Remove="Migrations\20220425235120_NewColumnsAdded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\Employees.cshtml" />
   </ItemGroup>
 

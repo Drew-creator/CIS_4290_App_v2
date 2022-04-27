@@ -8,6 +8,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using CIS4290_App.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Diagnostics;
 
 namespace CIS4290_App.Controllers
 {
@@ -39,8 +40,8 @@ namespace CIS4290_App.Controllers
         // POST request to send user account info
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(UserRegistrationModel userModel)
-        {
+        public async Task<IActionResult> Register(NewUserRegistrationModel userModel)
+        { 
             // if model is invalid, return the same view with the invalid model, else continue
             if (!ModelState.IsValid)
             {
@@ -48,6 +49,8 @@ namespace CIS4290_App.Controllers
             }
 
             var user = _mapper.Map<User>(userModel);
+
+
 
             // CreateAsync method validates the password related errors
             var result = await _userManager.CreateAsync(user, userModel.Password);

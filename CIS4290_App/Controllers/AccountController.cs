@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using CIS4290_App.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
+using System.Net.Http;
+using System.Linq;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.JsonPatch;
+using System.Text;
 
 namespace CIS4290_App.Controllers
 {
@@ -121,5 +127,49 @@ namespace CIS4290_App.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<string> PatchUser(ApiData User_Raw)
+        {
+
+            Debug.WriteLine("FDHKDJDHSKJDHSKJDHSD " + User_Raw.FirstName);
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://localhost:7029/api/AspNetUsers/14d8f4ba-d558-49e7-80aa-52215f5c077d");
+               
+                try
+                {
+                    //converts the UserModel to JsonPatchDocument<UserModel>
+                    List <ApiData> body = new List<ApiData>();
+                    body.Add(User_Raw);
+                    Debug.WriteLine("FDHKDJDHSKJDHSKJDHSD " + body);
+
+                    //Converts the JsonPatchDocument<UserModel> to Json
+                    var serializedJsonDocument = JsonConvert.SerializeObject(body);
+                    Debug.WriteLine("FDHKDJDHSKJDHSKJDHSD " + serializedJsonDocument);
+                    var stringUser = new StringContent(serializedJsonDocument, UnicodeEncoding.UTF8, "application/json-patch+json");
+
+                    //
+                    var request = new HttpRequestMessage(new HttpMethod("PATCH"), "https://localhost:7029/api/AspNetUsers/14d8f4ba-d558-49e7-80aa-52215f5c077d");
+                    request.Content = stringUser;
+
+                    //response stores the Post result to later ensure that it has been successful
+                    var response = await client.SendAsync(request);
+                    response.EnsureSuccessStatusCode();
+
+                    string HttpResponse = await response.Content.ReadAsStringAsync();
+                    return HttpResponse;
+                }
+                catch (HttpRequestException error)
+                {
+                    return null;
+                }
+            }
+            
+        }
+
     }
+
+
 }

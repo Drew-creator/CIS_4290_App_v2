@@ -1,45 +1,41 @@
-﻿
+﻿@model CIS4290_App.Models.ApiData
 
+@{
+    ViewData["Title"] = "GetMembers";
+}
 
-@model CIS4290_App.Models.ApiData
-
-
-
+<h1>GetMembers</h1>
 
 <h4>ApiData</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="PatchUser">
+        <form asp-action="GetMembers">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="value" class="control-label"></label>
-                <input asp-for="value" class="form-control" id="charge" placeholder="$0" required/>
+                <input asp-for="value" class="form-control" />
                 <span asp-validation-for="value" class="text-danger"></span>
             </div>
-            <div class="form-group" hidden>
+            <div class="form-group">
                 <label asp-for="path" class="control-label"></label>
-                <input asp-for="path" class="form-control" value="/Amount"/>
+                <input asp-for="path" class="form-control" />
                 <span asp-validation-for="path" class="text-danger"></span>
             </div>
-            <div class="form-group" hidden>
+            <div class="form-group">
                 <label asp-for="op" class="control-label"></label>
-                <input asp-for="op" class="form-control" value="replace"/>
+                <input asp-for="op" class="form-control" />
                 <span asp-validation-for="op" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CardNumber" class="control-label"></label>
-                <input asp-for="CardNumber" class="form-control" inputmode="numeric" required pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
-                <span asp-validation-for="CardNumber" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="CardNumber" />
             <div class="form-group">
                 <label asp-for="ExpDate" class="control-label"></label>
-                <input asp-for="ExpDate" class="form-control" placeholder="mm/yy" minlength="5" maxlength="5"/>
+                <input asp-for="ExpDate" class="form-control" />
                 <span asp-validation-for="ExpDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Csv" class="control-label"></label>
-                <input asp-for="Csv" class="form-control" type="number" placeholder="xxx" minlength="3" maxlength="3" required/>
+                <input asp-for="Csv" class="form-control" />
                 <span asp-validation-for="Csv" class="text-danger"></span>
             </div>
             <div class="form-group">

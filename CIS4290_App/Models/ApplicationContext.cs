@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CIS4290_App.Models;
 
 namespace CIS4290_App.Models
 {
@@ -14,6 +15,8 @@ namespace CIS4290_App.Models
         {
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<CIS4290_App.Models.ApiData> ApiData { get; set; }
     }
 
 }

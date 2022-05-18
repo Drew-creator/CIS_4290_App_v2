@@ -91,7 +91,8 @@ namespace CIS4290_App.Controllers
                 return View(userModel);
             }
 
-            var result = await _signInManager.PasswordSignInAsync(userModel.Email, userModel.Password, userModel.RememberMe, false);
+            var result = await _signInManager.PasswordSignInAsync(
+                userModel.Email, userModel.Password, userModel.RememberMe, false);
             if (result.Succeeded)
             {
                 return RedirectToLocal(returnUrl);
@@ -136,7 +137,6 @@ namespace CIS4290_App.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:7029/api/AspNetUsers/14d8f4ba-d558-49e7-80aa-52215f5c077d");
                
                 try
                 {
@@ -151,7 +151,7 @@ namespace CIS4290_App.Controllers
                     var stringUser = new StringContent(serializedJsonDocument, UnicodeEncoding.UTF8, "application/json-patch+json");
 
                     //
-                    var request = new HttpRequestMessage(new HttpMethod("PATCH"), "https://localhost:7029/api/AspNetUsers/14d8f4ba-d558-49e7-80aa-52215f5c077d");
+                    var request = new HttpRequestMessage(new HttpMethod("PATCH"), "https://localhost:7029/api/AspNetUsers/08cd6de5-9eb7-4901-b93f-14874b1cdafb");
                     request.Content = stringUser;
 
                     //response stores the Post result to later ensure that it has been successful

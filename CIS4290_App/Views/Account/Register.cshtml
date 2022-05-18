@@ -40,47 +40,47 @@
                                                     <div asp-validation-summary="All" class="text-danger"></div>
                                                     <div class="form-group">
                                                         <label asp-for="FirstName" class="control-label">First Name</label>
-                                                        <input asp-for="FirstName" class="form-control" />
+                                                        <input asp-for="FirstName" class="form-control" required="required"/>
                                                         <span asp-validation-for="FirstName" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="LastName" class="control-label">Last Name</label>
-                                                        <input asp-for="LastName" class="form-control" />
+                                                        <input asp-for="LastName" class="form-control" required="required"/>
                                                         <span asp-validation-for="LastName" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="Email" class="control-label">Email</label>
-                                                        <input asp-for="Email" class="form-control" />
+                                                        <input asp-for="Email" class="form-control" required="required"/>
                                                         <span asp-validation-for="Email" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="Password" class="control-label">Password</label>
-                                                        <input asp-for="Password" class="form-control" />
+                                                        <input asp-for="Password" class="form-control" required="required"/>
                                                         <span asp-validation-for="Password" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="ConfirmPassword" class="control-label">Confirm Password</label>
-                                                        <input asp-for="ConfirmPassword" class="form-control" />
+                                                        <input asp-for="ConfirmPassword" class="form-control" required="required"/>
                                                         <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="CardNumber" class="control-label">Card Number</label>
-                                                        <input asp-for="CardNumber" class="form-control" />
+                                                        <input asp-for="CardNumber" class="form-control" required pattern="[0-9\s]{13,19}"/>
                                                         <span asp-validation-for="CardNumber" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="ExpDate" class="control-label">Exp Date</label>
-                                                        <input asp-for="ExpDate" class="form-control" />
+                                                        <input asp-for="ExpDate" class="form-control" required="required" placeholder="mm/yy" minlength="5" maxlength="5"/>
                                                         <span asp-validation-for="ExpDate" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label asp-for="Csv" class="control-label">Csv</label>
-                                                        <input asp-for="Csv" class="form-control" />
+                                                        <input asp-for="Csv" class="form-control" required="required" placeholder="xxx" minlength="3" maxlength="3"/>
                                                         <span asp-validation-for="Csv" class="text-danger"></span>
                                                     </div>
                                                     <div class="form-group">
                                                     <label asp-for=" Amount" class="control-label"> Amount</label>
-                                                    <input asp-for=" Amount" class="form-control" />
+                                                    <input asp-for=" Amount" class="form-control" required="required"/>
                                                     <span asp-validation-for=" Amount" class="text-danger"></span>
                                             </div>
 
